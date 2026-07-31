@@ -1,0 +1,76 @@
+:root {
+  /* ----------COLORS---------- */
+  /* ========= Brand / Navy ========= */
+  --navy-500: #041c45;
+  --navy-600: #031637;
+  --navy-700: #021129;
+  --navy-800: #020b1c;
+  --navy-900: #01060e;
+
+  /* ========= Blue Gray ========= */
+  --blue-gray-500: #36496a;
+  --blue-gray-400: #68778f;
+  --blue-gray-300: #9ba4b5;
+  --blue-gray-200: #cdd2da;
+
+  /* ========= Neutral ========= */
+  --white: #ffffff;
+  --neutral-50: #f8f9fb;
+  --neutral-100: #eef1f5;
+  --neutral-200: #e2e7ee;
+  --neutral-300: #cdd2da;
+  --neutral-400: #9ba4b5;
+  --neutral-500: #68778f;
+  --neutral-600: #36496a;
+  --neutral-700: #1a2740;
+  --neutral-800: #0f1a2e;
+  --neutral-900: #01060e;
+
+  /* ========= Semantic ========= */
+  --color-background: var(--white);
+  --color-background-subtle: var(--neutral-50);
+  --color-surface: var(--white);
+  --color-surface-muted: var(--neutral-100);
+  --color-surface-inverse: var(--navy-700);
+  --color-border: var(--neutral-200);
+  --color-border-strong: var(--blue-gray-300);
+  --color-text: var(--navy-700);
+  --color-text-muted: var(--blue-gray-500);
+  --color-text-inverse: var(--white);
+  --color-primary: var(--navy-500);
+  --color-primary-hover: var(--navy-600);
+  --color-primary-active: var(--navy-700);
+  --color-overlay: rgba(4, 28, 69, 0.72);
+
+  /* ----------SPACINGS---------- */
+  --spacing-012: 0.0625rem; /* 1px */
+  --spacing-025: 0.125rem; /* 2px */
+  --spacing-050: 0.25rem; /* 4px */
+  --spacing-075: 0.375rem; /* 6px */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-125: 0.625rem; /* 10px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-250: 1.25rem; /* 20px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-600: 3rem; /* 48px */
+  --spacing-800: 4rem; /* 64px */
+  --spacing-1000: 5rem; /* 80px */
+  --spacing-1200: 6rem; /* 96px */
+  --spacing-1400: 7rem; /* 112px */
+  --spacing-1600: 8rem; /* 128px */
+  --spacing-1800: 8.75rem; /* 140px */
+
+  /* ----------BORDER RADII---------- */
+  --radius-4: 0.25rem; /* 4px */
+  --radius-6: 0.375rem; /* 6px */
+  --radius-8: 0.5rem; /* 8px */
+  --radius-10: 0.625rem; /* 10px */
+  --radius-12: 0.75rem; /* 12px */
+  --radius-16: 1rem; /* 16px */
+  --radius-20: 1.25rem; /* 20px */
+  --radius-24: 1.5rem; /* 24px */
+  --radius-full: 999px;
+}
