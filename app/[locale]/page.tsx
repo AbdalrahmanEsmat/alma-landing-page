@@ -8,11 +8,11 @@ export default async function Page({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const translation = await getTranslations('Home');
+  const t = await getTranslations('Home');
 
   return (
     <main>
-      <h1>{translation('title')}</h1>
+      <h1>{t('title')}</h1>
     </main>
   );
 }
