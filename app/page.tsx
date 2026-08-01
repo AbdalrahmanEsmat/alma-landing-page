@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <main>
-      <h1>الصفحة الرئيسية</h1>
+      <h1>الصفحة الرئسيسية</h1>
     </main>
   );
 }
