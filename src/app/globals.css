@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 * {
   padding: 0;
   margin: 0;
@@ -9,7 +11,7 @@
 /* ========= Tajawal ========= */
 @font-face {
   font-family: 'Tajawal';
-  src: url('../assets/fonts/tajawal/Tajawal-Light.ttf') format('truetype');
+  src: url('../../assets/fonts/tajawal/Tajawal-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -17,7 +19,7 @@
 
 @font-face {
   font-family: 'Tajawal';
-  src: url('../assets/fonts/tajawal/Tajawal-Regular.ttf') format('truetype');
+  src: url('../../assets/fonts/tajawal/Tajawal-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -25,7 +27,7 @@
 
 @font-face {
   font-family: 'Tajawal';
-  src: url('../assets/fonts/tajawal/Tajawal-Medium.ttf') format('truetype');
+  src: url('../../assets/fonts/tajawal/Tajawal-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -33,7 +35,7 @@
 
 @font-face {
   font-family: 'Tajawal';
-  src: url('../assets/fonts/tajawal/Tajawal-Bold.ttf') format('truetype');
+  src: url('../../assets/fonts/tajawal/Tajawal-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -41,7 +43,8 @@
 
 @font-face {
   font-family: 'Tajawal';
-  src: url('../assets/fonts/tajawal/Tajawal-ExtraBold.ttf') format('truetype');
+  src: url('../../assets/fonts/tajawal/Tajawal-ExtraBold.ttf')
+    format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -49,7 +52,7 @@
 
 @font-face {
   font-family: 'Tajawal';
-  src: url('../assets/fonts/tajawal/Tajawal-Black.ttf') format('truetype');
+  src: url('../../assets/fonts/tajawal/Tajawal-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -73,26 +76,11 @@
   --blue-gray-300: #9ba4b5;
   --blue-gray-200: #cdd2da;
 
-  /* ========= Neutral ========= */
-  --white: #ffffff;
-  --neutral-50: #f8f9fb;
-  --neutral-100: #eef1f5;
-  --neutral-200: #e2e7ee;
-  --neutral-300: #cdd2da;
-  --neutral-400: #9ba4b5;
-  --neutral-500: #68778f;
-  --neutral-600: #36496a;
-  --neutral-700: #1a2740;
-  --neutral-800: #0f1a2e;
-  --neutral-900: #01060e;
-
   /* ========= Semantic ========= */
   --color-background: var(--white);
   --color-background-subtle: var(--neutral-50);
   --color-surface: var(--white);
-  --color-surface-muted: var(--neutral-100);
   --color-surface-inverse: var(--navy-700);
-  --color-border: var(--neutral-200);
   --color-border-strong: var(--blue-gray-300);
   --color-text: var(--navy-700);
   --color-text-muted: var(--blue-gray-500);
