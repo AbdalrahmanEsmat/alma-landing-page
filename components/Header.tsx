@@ -1,13 +1,12 @@
-'use client';
-
 import headerLogo from '@/assets/images/logo-blue.png';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import styles from './Header.module.css';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
+import { getTranslations } from 'next-intl/server';
+import LangLinks from './LangLinks';
 
-export default function Header() {
-  const t = useTranslations('Nav');
+export default async function Header() {
+  const t = await getTranslations('Nav');
 
   return (
     <header className={styles.header}>
@@ -15,34 +14,31 @@ export default function Header() {
         <nav>
           <ul className={styles.ul}>
             <li>
-              <Link className={styles.link} href="#">
+              <Link className={styles.link} href="/">
                 {t('home')}
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href="#">
+              <Link className={styles.link} href="/about">
                 {t('about-us')}
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href="#">
+              <Link className={styles.link} href="/serveces">
                 {t('serveces')}
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href="#">
+              <Link className={styles.link} href="/projects">
                 {t('projetcs')}
               </Link>
             </li>
             <li>
-              <Link className={styles.link} href="#">
+              <Link className={styles.contactUs} href="/contact">
                 {t('contact-us')}
               </Link>
             </li>
-            <li>
-              <button>En</button>
-              <button>العربية</button>
-            </li>
+            <LangLinks />
           </ul>
         </nav>
       </div>
