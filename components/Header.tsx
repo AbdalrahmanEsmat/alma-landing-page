@@ -32,15 +32,15 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.branding}>
+      <Link href="/" className={styles.branding}>
+        <div className={styles.logoContainer}>
+          <Image className={styles.logo} src={headerLogo} alt="logo" />
+        </div>
         <div className={styles.brandingTextContainer}>
           <p className={styles.logoText}>للاستشارات الهندسية</p>
           <p className={styles.logoText}>Engineering Consulting</p>
         </div>
-        <div className={styles.logoContainer}>
-          <Image className={styles.logo} src={headerLogo} alt="logo" />
-        </div>
-      </div>
+      </Link>
 
       <div ref={menuRef}>
         <button
@@ -70,27 +70,42 @@ export default function Header() {
               </Link>
             </li>
             <li onClick={() => setIsOpen((prev) => !prev)}>
-              <Link className={styles.contactUs} href="/contact">
+              <Link
+                className={`${styles.contactUs} ${pathName === '/contact' ? styles.contactUsActive : ''}`}
+                href="/contact"
+              >
                 {t('contact-us')}
               </Link>
             </li>
             <li onClick={() => setIsOpen((prev) => !prev)}>
-              <Link className={styles.link} href="/projects">
+              <Link
+                className={`${styles.link} ${pathName === '/projects' ? styles.active : ''}`}
+                href="/projects"
+              >
                 {t('projetcs')}
               </Link>
             </li>
             <li onClick={() => setIsOpen((prev) => !prev)}>
-              <Link className={styles.link} href="/serveces">
+              <Link
+                className={`${styles.link} ${pathName === '/serveces' ? styles.active : ''}`}
+                href="/serveces"
+              >
                 {t('serveces')}
               </Link>
             </li>
             <li onClick={() => setIsOpen((prev) => !prev)}>
-              <Link className={styles.link} href="/about">
+              <Link
+                className={`${styles.link} ${pathName === '/about' ? styles.active : ''}`}
+                href="/about"
+              >
                 {t('about-us')}
               </Link>
             </li>
             <li onClick={() => setIsOpen((prev) => !prev)}>
-              <Link className={styles.link} href="/">
+              <Link
+                className={`${styles.link} ${pathName === '/' ? styles.active : ''}`}
+                href="/"
+              >
                 {t('home')}
               </Link>
             </li>

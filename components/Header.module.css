@@ -49,6 +49,17 @@
   width: 100%;
 }
 
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: var(--spacing-025);
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
 .contactUs {
   display: flex;
   align-items: center;
@@ -60,6 +71,10 @@
   border: calc(2 / 16 * 1rem) solid var(--blue-gray-200);
   border-radius: var(--radius-8);
   transition: background-color 0.3s ease-out;
+}
+
+.contactUsActive {
+  background-color: var(--blue-gray-400);
 }
 
 .contactUs:hover {
