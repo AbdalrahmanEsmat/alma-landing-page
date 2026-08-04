@@ -32,6 +32,16 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      <div className={styles.branding}>
+        <div className={styles.brandingTextContainer}>
+          <p className={styles.logoText}>للاستشارات الهندسية</p>
+          <p className={styles.logoText}>Engineering Consulting</p>
+        </div>
+        <div className={styles.logoContainer}>
+          <Image className={styles.logo} src={headerLogo} alt="logo" />
+        </div>
+      </div>
+
       <div ref={menuRef}>
         <button
           className={styles.toggle}
@@ -43,31 +53,6 @@ export default function Header() {
           className={`${styles.nav} ${isOpen ? styles.navOpen : styles.navClose}`}
         >
           <ul className={styles.ul}>
-            <li onClick={() => setIsOpen((prev) => !prev)}>
-              <Link className={styles.link} href="/">
-                {t('home')}
-              </Link>
-            </li>
-            <li onClick={() => setIsOpen((prev) => !prev)}>
-              <Link className={styles.link} href="/about">
-                {t('about-us')}
-              </Link>
-            </li>
-            <li onClick={() => setIsOpen((prev) => !prev)}>
-              <Link className={styles.link} href="/serveces">
-                {t('serveces')}
-              </Link>
-            </li>
-            <li onClick={() => setIsOpen((prev) => !prev)}>
-              <Link className={styles.link} href="/projects">
-                {t('projetcs')}
-              </Link>
-            </li>
-            <li onClick={() => setIsOpen((prev) => !prev)}>
-              <Link className={styles.contactUs} href="/contact">
-                {t('contact-us')}
-              </Link>
-            </li>
             <li className={styles.langLinks}>
               <Link
                 href={pathName}
@@ -84,18 +69,33 @@ export default function Header() {
                 العربية
               </Link>
             </li>
+            <li onClick={() => setIsOpen((prev) => !prev)}>
+              <Link className={styles.contactUs} href="/contact">
+                {t('contact-us')}
+              </Link>
+            </li>
+            <li onClick={() => setIsOpen((prev) => !prev)}>
+              <Link className={styles.link} href="/projects">
+                {t('projetcs')}
+              </Link>
+            </li>
+            <li onClick={() => setIsOpen((prev) => !prev)}>
+              <Link className={styles.link} href="/serveces">
+                {t('serveces')}
+              </Link>
+            </li>
+            <li onClick={() => setIsOpen((prev) => !prev)}>
+              <Link className={styles.link} href="/about">
+                {t('about-us')}
+              </Link>
+            </li>
+            <li onClick={() => setIsOpen((prev) => !prev)}>
+              <Link className={styles.link} href="/">
+                {t('home')}
+              </Link>
+            </li>
           </ul>
         </nav>
-      </div>
-
-      <div className={styles.branding}>
-        <div className={styles.brandingTextContainer}>
-          <p className={styles.logoText}>للاستشارات الهندسية</p>
-          <p className={styles.logoText}>Engineering Consulting</p>
-        </div>
-        <div className={styles.logoContainer}>
-          <Image className={styles.logo} src={headerLogo} alt="logo" />
-        </div>
       </div>
     </header>
   );

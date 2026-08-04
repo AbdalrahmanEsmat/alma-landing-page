@@ -3,16 +3,87 @@ import '../globals.css';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { title } from 'process';
+import { setRequestLocale } from 'next-intl/server';
+import openGraph from '@/assets/images/open-graph-image.png';
 
 type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
 
-export const metadata = {
-  title: 'ألما للاستشارات الهندسية والمعمارية',
-};
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return {
+    title:
+      locale === 'ar'
+        ? 'ألما للاستشارات الهندسية والمعمارية'
+        : 'Alma Engineering & Architectural Consulting',
+    description:
+      locale === 'ar'
+        ? 'ألما للاستشارات الهندسية والمعمارية تقدم حلولاً هندسية متكاملة تشمل التصميم المعماري، والإشراف الهندسي، وإدارة المشاريع، مع الالتزام بأعلى معايير الجودة والابتكار.'
+        : 'Alma for Engineering and Architectural Consulting offers integrated engineering solutions including architectural design, engineering supervision, and project management.',
+    openGraph: {
+      title:
+        locale === 'ar'
+          ? 'ألما للاستشارات الهندسية والمعمارية'
+          : 'Alma Engineering & Architectural Consulting',
+
+      description:
+        locale === 'ar'
+          ? 'ألما للاستشارات الهندسية والمعمارية تقدم حلولاً هندسية متكاملة تشمل التصميم المعماري، والإشراف الهندسي، وإدارة المشاريع، مع الالتزام بأعلى معايير الجودة والابتكار.'
+          : 'Alma for Engineering and Architectural Consulting offers integrated engineering solutions including architectural design, engineering supervision, and project management.',
+      type: 'website',
+      locale: locale === 'ar' ? 'ar_EG' : 'en_US',
+      images: [
+        {
+          url: openGraph.src,
+          width: openGraph.width,
+          height: openGraph.height,
+          alt:
+            locale === 'ar'
+              ? 'ألما للاستشارات الهندسية والمعمارية'
+              : 'Alma Engineering & Architectural Consulting',
+        },
+      ],
+      url: `/${locale}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title:
+        locale === 'ar'
+          ? 'ألما للاستشارات الهندسية والمعمارية'
+          : 'Alma Engineering & Architectural Consulting',
+
+      description:
+        locale === 'ar'
+          ? 'ألما للاستشارات الهندسية والمعمارية تقدم حلولاً هندسية متكاملة تشمل التصميم المعماري، والإشراف الهندسي، وإدارة المشاريع، مع الالتزام بأعلى معايير الجودة والابتكار.'
+          : 'Alma for Engineering and Architectural Consulting offers integrated engineering solutions including architectural design, engineering supervision, and project management.',
+
+      images: [
+        {
+          url: openGraph.src,
+          alt:
+            locale === 'ar'
+              ? 'ألما للاستشارات الهندسية والمعمارية'
+              : 'Alma Engineering & Architectural Consulting',
+        },
+      ],
+    },
+    //change later
+    metadataBase: new URL('https://alma.com'),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        en: '/en',
+        ar: '/ar',
+      },
+    },
+  };
+}
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'ar' }];
+}
 
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
@@ -20,8 +91,10 @@ export default async function RootLayout({ children, params }: Props) {
     notFound();
   }
 
+  setRequestLocale(locale);
+
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'ltr' : 'rtl'}>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body>
         <NextIntlClientProvider>
           <Header />

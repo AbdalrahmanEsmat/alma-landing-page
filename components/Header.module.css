@@ -118,7 +118,7 @@
   }
 
   .ul {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: var(--spacing-250);
     padding: var(--spacing-250) 0;
