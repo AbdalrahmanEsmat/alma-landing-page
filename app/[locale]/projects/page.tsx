@@ -1,4 +1,4 @@
-import openGraph from '@/assets/images/open-graph-image.png';
+import openGraphImg from '@/assets/images/open-graph-image.png';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -34,9 +34,9 @@ export async function generateMetadata({ params }: Props) {
       url: `/${locale}/projects`,
       images: [
         {
-          url: openGraph.src,
-          width: openGraph.width,
-          height: openGraph.height,
+          url: openGraphImg.src,
+          width: openGraphImg.width,
+          height: openGraphImg.height,
           alt:
             locale === 'ar'
               ? 'ألما للاستشارات الهندسية والمعمارية'
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: Props) {
 
       images: [
         {
-          url: openGraph.src,
+          url: openGraphImg.src,
           alt:
             locale === 'ar'
               ? 'ألما للاستشارات الهندسية والمعمارية'

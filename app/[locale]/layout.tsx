@@ -4,7 +4,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
-import openGraph from '@/assets/images/open-graph-image.png';
+import openGraphImg from '@/assets/images/open-graph-image.png';
 
 type Props = {
   children: React.ReactNode;
@@ -36,9 +36,9 @@ export async function generateMetadata({ params }: Props) {
       locale: locale === 'ar' ? 'ar_EG' : 'en_US',
       images: [
         {
-          url: openGraph.src,
-          width: openGraph.width,
-          height: openGraph.height,
+          url: openGraphImg.src,
+          width: openGraphImg.width,
+          height: openGraphImg.height,
           alt:
             locale === 'ar'
               ? 'ألما للاستشارات الهندسية والمعمارية'
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: Props) {
 
       images: [
         {
-          url: openGraph.src,
+          url: openGraphImg.src,
           alt:
             locale === 'ar'
               ? 'ألما للاستشارات الهندسية والمعمارية'

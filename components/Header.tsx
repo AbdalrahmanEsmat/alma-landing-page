@@ -3,10 +3,9 @@
 import headerLogo from '@/assets/images/logo-blue.png';
 import Image from 'next/image';
 import styles from './Header.module.css';
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { useState, useRef, useEffect } from 'react';
 import { useLocale, useTranslations } from 'use-intl';
-import { usePathname } from '../i18n/navigation';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +33,7 @@ export default function Header() {
     <header className={styles.header}>
       <Link href="/" className={styles.branding}>
         <div className={styles.logoContainer}>
-          <Image className={styles.logo} src={headerLogo} alt="logo" />
+          <Image className={styles.logo} src={headerLogo} alt="logo" priority />
         </div>
         <div className={styles.brandingTextContainer}>
           <p className={styles.logoText}>للاستشارات الهندسية</p>
