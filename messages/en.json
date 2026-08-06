@@ -7,6 +7,20 @@
     "contact-us": "Contact us"
   },
 
+  "Footer": {
+    "description": "Alma Engineering & Architectural Consultancy provides a comprehensive range of integrated services, delivering innovative engineering and architectural solutions that combine quality, efficiency, and adherence to approved standards.",
+    "quick-links": "Quick Links",
+    "home": "Home",
+    "about-us": "About Us",
+    "serveces": "Services",
+    "projects": "Projects",
+    "contact-us": "Contact Us",
+    "address": "Riyadh, Al Narjis Neighborhood, Othman Ibn Affan Road",
+    "insatgram": "Insatgram",
+    "email": "Email",
+    "whatsapp": "WhatsApp"
+  },
+
   "Home": {
     "title": "Engineering consulting with over 25 years of experience",
     "contact": "Contact us"

@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import openGraphImg from '@/assets/images/open-graph-image.png';
+import Footer from '@/components/Footer';
 
 type Props = {
   children: React.ReactNode;
@@ -99,6 +100,7 @@ export default async function RootLayout({ children, params }: Props) {
         <NextIntlClientProvider>
           <Header />
           {children}
+          <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>

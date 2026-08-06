@@ -1,0 +1,41 @@
+.branding {
+  display: flex;
+  gap: var(--spacing-075);
+  cursor: pointer;
+}
+
+.whiteBg {
+  background-color: #fff;
+}
+.blueBg {
+  background-color: var(--navy-500);
+}
+
+.logoContainer {
+  padding: var(--spacing-025);
+  border-radius: var(--radius-6);
+}
+
+.logo {
+  width: calc(40 / 16 * 1rem);
+  height: calc(40 / 16 * 1rem);
+}
+
+.brandingTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.whiteText {
+  color: #fff;
+}
+
+.blueText {
+  color: var(--navy-500);
+}
+
+.logoText {
+  font-size: 1rem;
+  text-align: center;
+}

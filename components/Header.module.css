@@ -4,6 +4,13 @@
   align-items: center;
   background-color: var(--navy-500);
   padding: var(--spacing-150) var(--spacing-500);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 1000;
 }
 
 /* *** */
@@ -146,28 +153,4 @@
   .contactUs {
     height: 3rem;
   }
-}
-
-/* *** */
-.branding {
-  display: flex;
-  gap: var(--spacing-075);
-  cursor: pointer;
-}
-
-.logoContainer {
-  background-color: #fff;
-  padding: var(--spacing-025);
-  border-radius: var(--radius-6);
-}
-
-.logo {
-  width: calc(40 / 16 * 1rem);
-  height: calc(40 / 16 * 1rem);
-}
-
-.logoText {
-  color: #fff;
-  font-size: 1rem;
-  text-align: center;
 }
