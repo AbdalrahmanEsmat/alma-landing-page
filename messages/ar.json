@@ -21,6 +21,16 @@
     "whatsapp": "واتساب"
   },
 
+  "HomePageHero": {
+    "title": "Integrated Engineering and Architectural Consulting with Over 25 Years of Experience",
+    "description": "نُقدم حلولاً استشارية متكاملة في التصميم المعماري، التخطيط العمراني والتصميم الداخلي وإدارة المشاريع"
+  },
+
+  "Statistics": {
+    "projects": "مشروع",
+    "years": "سنة خبرة"
+  },
+
   "Home": {
     "title": "استشارات هندسية بخبرة تتجاوز 25 عاماً",
     "contact": "تواصل معنا"

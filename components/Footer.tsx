@@ -83,7 +83,7 @@ export default async function Footer({ locale }: Props) {
 
       <div className={styles.bottomBar}>
         {locale === 'ar'
-          ? `جميع الحقوق محفوظة © ${year} - ألما للاستشارات الهندسية`
+          ? `جميع الحقوق محفوظة © ${year} - ألمى للاستشارات الهندسية`
           : `All Rights Reserved © ${year} - Alma Engineering Consulting`}
       </div>
     </footer>

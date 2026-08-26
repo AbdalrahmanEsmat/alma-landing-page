@@ -1,0 +1,40 @@
+.statistics {
+  position: absolute;
+  inset-inline-start: 4rem;
+  bottom: 4rem;
+  z-index: 2;
+
+  display: flex;
+  gap: 1rem;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-100);
+
+  min-width: calc(120 / 16 * 1rem);
+  padding: 1.5rem;
+
+  border-radius: 1rem;
+
+  background: rgba(11, 35, 71, 0.3);
+  backdrop-filter: blur(8px);
+
+  color: #fff;
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 48em) {
+  .statistics {
+    position: static;
+
+    /* justify-content: center; */
+    margin-top: 3rem;
+  }
+}

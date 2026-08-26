@@ -21,6 +21,16 @@
     "whatsapp": "WhatsApp"
   },
 
+  "HomePageHero": {
+    "title": "Integrated Engineering and Architectural Consulting with Over 25 Years of Experience",
+    "description": "We provide integrated consulting solutions in architectural design, urban planning, interior design, and project management"
+  },
+
+  "Statistics": {
+    "projects": "Projects",
+    "years": "Yrs of Exp"
+  },
+
   "Home": {
     "title": "Engineering consulting with over 25 years of experience",
     "contact": "Contact us"
