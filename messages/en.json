@@ -36,6 +36,26 @@
     "description": "We are proud to offer an integrated range of engineering and consulting services to meet all your needs."
   },
 
+  "stepsComp": {
+    "stepsTitle": "From Idea to Execution",
+    "stepsDescription": "A clear workflow that ensures successful project delivery",
+
+    "stepOneTitle": "Idea Study",
+    "stepOneDescription": "Understanding your needs and goals and analyzing the project requirements",
+
+    "stepTwoTitle": "Planning & Design",
+    "stepTwoDescription": "Developing solutions and designs that align with your vision",
+
+    "stepThreeTitle": "Licensing & Approvals",
+    "stepThreeDescription": "Preparing documents and obtaining all necessary approvals",
+
+    "stepFourTitle": "Execution Supervision",
+    "stepFourDescription": "Monitoring execution phases to ensure quality and compliance with specifications and standards",
+
+    "stepFiveTitle": "Handover & Testing",
+    "stepFiveDescription": "Conducting comprehensive testing and ensuring compliance with specifications and standards"
+  },
+
   "homePage": {
     "servicesTitle": "Our Services",
     "allServicesBtn": "Show All Services",

@@ -4,6 +4,7 @@ import Container from '@/components/Container';
 import PageHero from '@/components/PageHero';
 import Services from '@/components/Services';
 import { getTranslations } from 'next-intl/server';
+import Steps from './_components/Steps';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -89,6 +90,7 @@ export default async function ServicesPage() {
       <Container>
         <Services />
       </Container>
+      <Steps />
     </main>
   );
 }
