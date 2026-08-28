@@ -1,0 +1,17 @@
+.container {
+  padding: var(--spacing-600) var(--spacing-1800);
+}
+
+/* max-width: 730px */
+@media (max-width: 45.625em) {
+  .container {
+    padding: var(--spacing-400) var(--spacing-800);
+  }
+}
+
+/* max-width: 500px */
+@media (max-width: 31.25em) {
+  .container {
+    padding: var(--spacing-400) var(--spacing-400);
+  }
+}
