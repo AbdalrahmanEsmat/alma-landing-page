@@ -2,7 +2,7 @@
   "Nav": {
     "home": "الرئيسية",
     "about-us": "من نحن",
-    "serveces": "خدماتنا",
+    "services": "خدماتنا",
     "projetcs": "مشاريعنا",
     "contact-us": "تواصل معنا"
   },
@@ -12,7 +12,7 @@
     "quick-links": "روابط سريعة",
     "home": "الرئيسية",
     "about-us": "من نحن",
-    "serveces": "خدماتنا",
+    "services": "خدماتنا",
     "projects": "مشاريعنا",
     "contact-us": "تواصل معنا",
     "address": "الرياض، حي النرجس طريق عثمان ابن عفان",
@@ -22,8 +22,9 @@
   },
 
   "HomePageHero": {
-    "title": "Integrated Engineering and Architectural Consulting with Over 25 Years of Experience",
-    "description": "نُقدم حلولاً استشارية متكاملة في التصميم المعماري، التخطيط العمراني والتصميم الداخلي وإدارة المشاريع"
+    "description": "نُقدم حلولاً استشارية متكاملة في التصميم المعماري، التخطيط العمراني والتصميم الداخلي وإدارة المشاريع",
+    "contactBtn": "تواصل معنا",
+    "projectsBtn": "مشاريعنا"
   },
 
   "Statistics": {
@@ -31,16 +32,20 @@
     "years": "سنة خبرة"
   },
 
-  "Home": {
-    "title": "استشارات هندسية بخبرة تتجاوز 25 عاماً",
-    "contact": "تواصل معنا"
+  "servicesComp": {
+    "description": "نفخر بتقديم مجموعة متكاملة من الخدمات الهندسية والاستشارية المتكاملة لتلبية جميع احتياجاتكم."
   },
 
-  "middlePart": {
-    "serveces": "خدماتنا",
-    "servecesDescription": "نفخر بتقديم مجموعة متكاملة من الخدمات الهندسية والاستشارية المتكاملة لتلبية جميع احتياجاتكم.",
-    "all": "عرض جميع الخدمات",
-    "projects": "مشاريعنا",
-    "projectsDescription": "نفخر بتقديم مجموعة من المشاريع المتميزة التي تعكس خبراتنا وجودة أعمالنا."
+  "homePage": {
+    "servicesTitle": "خدماتنا",
+    "allServicesBtn": "عرض جميع الخدمات",
+    "projectsTitle": "مشاريعنا",
+    "allProjectsBtn": "عرض جميع المشاريع"
+  },
+
+  "servicesPage": {
+    "title": "خدماتنا",
+    "homeLinkText": "الرئيسية",
+    "servicesLinkText": "خدماتنا"
   }
 }

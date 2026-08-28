@@ -1,3 +1,64 @@
-.middlePart {
-  padding: var(--spacing-600) var(--spacing-1800);
+.servicesPart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+.title {
+  color: var(--navy-500);
+  font-weight: 800;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: var(--spacing-100);
+  text-align: center;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--spacing-1000); /* 32px */
+  height: var(--spacing-025); /* 1px */
+  background: var(--navy-500);
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  bottom: calc(var(--spacing-012) * -2);
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--spacing-075);
+  height: var(--spacing-075);
+  border-radius: 50%;
+  background: var(--navy-500);
+  box-shadow: 0 0 0 var(--spacing-050) #fff;
+  z-index: 1;
+}
+
+.showAllButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--blue-gray-400);
+  font-weight: 800;
+  transition: color 0.8s ease;
+  text-align: center;
+}
+
+.showAllButton::after {
+  content: '→';
+  margin-inline-start: var(--spacing-100);
+}
+
+[dir='rtl'] .showAllButton::after {
+  content: '←';
+}
+
+.showAllButton:hover {
+  color: var(--navy-500);
 }

@@ -77,10 +77,10 @@ export default function Header() {
             </li>
             <li onClick={() => setIsOpen((prev) => !prev)}>
               <Link
-                className={`${styles.link} ${pathName === '/serveces' ? styles.active : ''}`}
-                href="/serveces"
+                className={`${styles.link} ${pathName === '/services' ? styles.active : ''}`}
+                href="/services"
               >
-                {t('serveces')}
+                {t('services')}
               </Link>
             </li>
             <li onClick={() => setIsOpen((prev) => !prev)}>

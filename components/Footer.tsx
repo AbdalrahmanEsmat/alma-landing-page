@@ -31,7 +31,7 @@ export default async function Footer({ locale }: Props) {
           <nav className={styles.links}>
             <Link href="/">{t('home')}</Link>
             <Link href="/about">{t('about-us')}</Link>
-            <Link href="/services">{t('serveces')}</Link>
+            <Link href="/services">{t('services')}</Link>
             <Link href="/projects">{t('projects')}</Link>
             <Link href="/contact">{t('contact-us')}</Link>
           </nav>

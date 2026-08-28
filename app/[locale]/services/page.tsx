@@ -1,4 +1,9 @@
 import openGraphImg from '@/assets/images/open-graph-image.png';
+import serviceHeroBg from '@/assets/images/serviceHeroBg.jpg';
+import Container from '@/components/Container';
+import PageHero from '@/components/PageHero';
+import Services from '@/components/Services';
+import { getTranslations } from 'next-intl/server';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -71,10 +76,19 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default function ServecesPage() {
+export default async function ServicesPage() {
+  const t = await getTranslations('servicesPage');
   return (
     <main>
-      <h1>this is the serveces page</h1>
+      <PageHero
+        title={t('title')}
+        backgroundUrl={serviceHeroBg.src}
+        homeLinkText={t('homeLinkText')}
+        servicesLinkText={t('servicesLinkText')}
+      />
+      <Container>
+        <Services />
+      </Container>
     </main>
   );
 }

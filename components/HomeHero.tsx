@@ -27,8 +27,8 @@ export default async function HomeHero() {
         <p className={styles.description}>{t('description')}</p>
 
         <div className={styles.actions}>
-          <Link href="/contact">تواصل معنا</Link>
-          <Link href="/projects">مشاريعنا</Link>
+          <Link href="/contact">{t('contactBtn')}</Link>
+          <Link href="/projects">{t('projectsBtn')}</Link>
         </div>
       </div>
 

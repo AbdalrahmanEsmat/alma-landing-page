@@ -2,7 +2,7 @@
   "Nav": {
     "home": "Home",
     "about-us": "About us",
-    "serveces": "Serveces",
+    "services": "Services",
     "projetcs": "Projects",
     "contact-us": "Contact us"
   },
@@ -12,7 +12,7 @@
     "quick-links": "Quick Links",
     "home": "Home",
     "about-us": "About Us",
-    "serveces": "Services",
+    "services": "Services",
     "projects": "Projects",
     "contact-us": "Contact Us",
     "address": "Riyadh, Al Narjis Neighborhood, Othman Ibn Affan Road",
@@ -22,8 +22,9 @@
   },
 
   "HomePageHero": {
-    "title": "Integrated Engineering and Architectural Consulting with Over 25 Years of Experience",
-    "description": "We provide integrated consulting solutions in architectural design, urban planning, interior design, and project management"
+    "description": "We provide integrated consulting solutions in architectural design, urban planning, interior design, and project management",
+    "contactBtn": "Contact Us",
+    "projectsBtn": "Projects"
   },
 
   "Statistics": {
@@ -31,16 +32,20 @@
     "years": "Yrs of Exp"
   },
 
-  "Home": {
-    "title": "Engineering consulting with over 25 years of experience",
-    "contact": "Contact us"
+  "servicesComp": {
+    "description": "We are proud to offer an integrated range of engineering and consulting services to meet all your needs."
   },
 
-  "middlePart": {
-    "serveces": "Our Serveces",
-    "servecesDescription": "We are proud to offer an integrated range of engineering and consulting services to meet all your needs.",
-    "all": "Show All Services",
-    "projects": "Our Projects",
-    "projectsDescription": "We are proud to present a collection of distinguished projects that reflect our expertise and the quality of our work."
+  "homePage": {
+    "servicesTitle": "Our Services",
+    "allServicesBtn": "Show All Services",
+    "projectsTitle": "Our Projects",
+    "allProjectsBtn": "Show All Projects"
+  },
+
+  "servicesPage": {
+    "title": "Our Services",
+    "homeLinkText": "Home",
+    "servicesLinkText": "Services"
   }
 }

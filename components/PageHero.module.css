@@ -1,0 +1,45 @@
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  position: relative;
+
+  padding: 8rem 2rem;
+}
+
+.hero::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(7, 24, 51, 0.3);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.title {
+  color: #fff;
+  font-size: 3rem;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: var(--spacing-100);
+  color: #fff;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
