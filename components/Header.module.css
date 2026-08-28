@@ -15,9 +15,11 @@
 
 /* *** */
 .toggle {
-  color: #fff;
   display: none;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #fff;
 }
 
 .nav {
@@ -29,6 +31,7 @@
   flex-direction: row-reverse;
   gap: var(--spacing-400);
   height: 100%;
+  list-style: none;
 }
 
 .link {
@@ -37,6 +40,7 @@
   height: 100%;
   display: flex;
   align-items: center;
+  text-decoration: none;
 
   position: relative;
 }
@@ -78,6 +82,7 @@
   border: calc(2 / 16 * 1rem) solid var(--blue-gray-200);
   border-radius: var(--radius-8);
   transition: background-color 0.3s ease-out;
+  text-decoration: none;
 }
 
 .contactUsActive {
@@ -100,6 +105,7 @@
   background-color: var(--navy-600);
   border-radius: var(--radius-8);
   transition: background-color 0.2s ease-out;
+  text-decoration: none;
 }
 
 .langLink:hover {
@@ -146,7 +152,9 @@
     padding: var(--spacing-250) 0;
     width: 70vw;
     border-radius: var(--radius-12);
-    background-color: var(--navy-500);
+    background: rgba(77, 89, 110, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .link,

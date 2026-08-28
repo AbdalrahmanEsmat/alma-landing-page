@@ -1,68 +1,14 @@
 import HomeHero from '@/components/HomeHero';
-import { getTranslations } from 'next-intl/server';
+import Services from '@/components/Services';
+import Styles from './page.module.css';
 
-type Props = {
-  params: Promise<{ locale: string }>;
-};
-
-export default async function Page({ params }: Props) {
-  const { locale } = await params;
-  const t = await getTranslations('Home');
+export default async function Page() {
   return (
     <main>
-      <HomeHero locale={locale} />
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
-      <h1>{t('title')}</h1>
+      <HomeHero />
+      <div className={Styles.middlePart}>
+        <Services numberOfCards={4} />
+      </div>
     </main>
   );
 }

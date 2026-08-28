@@ -37,11 +37,12 @@
   gap: 1rem;
 
   font-size: 1rem;
-  color: var(--navy-500);
 }
 
 .links a {
   transition: margin-inline-start 0.3s ease;
+  text-decoration: none;
+  color: var(--navy-500);
 }
 
 .links a:hover {
@@ -58,6 +59,7 @@
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   font-weight: 700;
+  color: var(--blue-gray-500);
 }
 
 .contactList {
@@ -81,6 +83,8 @@
 
 .contactList li a {
   text-align: start;
+  text-decoration: none;
+  color: var(--navy-500);
 }
 
 .icon {

@@ -34,5 +34,13 @@
   "Home": {
     "title": "Engineering consulting with over 25 years of experience",
     "contact": "Contact us"
+  },
+
+  "middlePart": {
+    "serveces": "Our Serveces",
+    "servecesDescription": "We are proud to offer an integrated range of engineering and consulting services to meet all your needs.",
+    "all": "Show All Services",
+    "projects": "Our Projects",
+    "projectsDescription": "We are proud to present a collection of distinguished projects that reflect our expertise and the quality of our work."
   }
 }

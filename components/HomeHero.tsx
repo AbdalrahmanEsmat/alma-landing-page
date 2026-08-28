@@ -1,13 +1,11 @@
 import Link from 'next/link';
 import styles from './HomeHero.module.css';
 import Statistics from './Statistics';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
-type Props = {
-  locale: string;
-};
+export default async function HomeHero() {
+  const locale = await getLocale();
 
-export default async function HomeHero({ locale }: Props) {
   const t = await getTranslations('HomePageHero');
   return (
     <section className={styles.hero}>
