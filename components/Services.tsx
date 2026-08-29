@@ -2,7 +2,6 @@ import { getServices } from '@/utils/data-service';
 import ServiceCard from './ServiceCard';
 import Styles from './Services.module.css';
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
 
 type Props = {
   numberOfCards?: number;

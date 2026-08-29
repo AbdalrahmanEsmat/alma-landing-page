@@ -1,0 +1,14 @@
+.errorContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.errorDescription {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: rgb(201, 95, 95);
+}

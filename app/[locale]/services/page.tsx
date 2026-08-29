@@ -1,9 +1,11 @@
+// export const revalidate = 60; // 60 seconds
+
 import openGraphImg from '@/assets/images/open-graph-image.png';
 import serviceHeroBg from '@/assets/images/serviceHeroBg.jpg';
 import Container from '@/components/Container';
 import PageHero from '@/components/PageHero';
 import Services from '@/components/Services';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Steps from './_components/Steps';
 
 type Props = {
@@ -77,8 +79,12 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function ServicesPage() {
+export default async function ServicesPage({ params }: Props) {
+  const { locale } = await params;
+
   const t = await getTranslations('servicesPage');
+  setRequestLocale(locale);
+
   return (
     <main>
       <PageHero

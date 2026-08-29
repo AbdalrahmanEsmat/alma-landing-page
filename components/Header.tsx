@@ -23,7 +23,6 @@ export default function Header() {
     document.addEventListener('click', handleClickOutside);
 
     return () => {
-      console.log('Cleaning...');
       document.removeEventListener('click', handleClickOutside);
     };
   }, []);
