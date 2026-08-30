@@ -18,3 +18,39 @@ export async function getServices(numberOfServices?: number) {
 
   return data;
 }
+
+export async function getProjects(numberOfProjects?: number) {
+  let query = supabase
+    .from('projects')
+    .select(
+      `
+      id,
+      name_ar,
+      name_en,
+      location_ar,
+      location_en,
+      category_ar,
+      category_en,
+      year,
+      project_images (
+        id,
+        image_url,
+        sort_order,
+        is_main
+      )
+    `,
+    )
+    .order('name_ar');
+
+  if (numberOfProjects !== undefined) {
+    query = query.limit(numberOfProjects);
+  }
+
+  const { data, error } = await query;
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data;
+}

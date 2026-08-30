@@ -1,4 +1,4 @@
-.servicesContainer {
+.projectsContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-200);
@@ -6,21 +6,21 @@
 
 /* max-width: 1260  */
 @media (max-width: 78.75em) {
-  .servicesContainer {
+  .projectsContainer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* max-width: 1100  */
 @media (max-width: 68.75em) {
-  .servicesContainer {
+  .projectsContainer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* max-width: 760  */
 @media (max-width: 47.5em) {
-  .servicesContainer {
+  .projectsContainer {
     grid-template-columns: repeat(1, 1fr);
   }
 }

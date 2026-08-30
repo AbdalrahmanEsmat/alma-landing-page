@@ -32,10 +32,6 @@
     "years": "Yrs of Exp"
   },
 
-  "servicesComp": {
-    "description": "We are proud to offer an integrated range of engineering and consulting services to meet all your needs."
-  },
-
   "stepsComp": {
     "stepsTitle": "From Idea to Execution",
     "stepsDescription": "A clear workflow that ensures successful project delivery",
@@ -58,8 +54,10 @@
 
   "homePage": {
     "servicesTitle": "Our Services",
+    "servicesDescription": "We are proud to offer an integrated range of engineering and consulting services to meet all your needs.",
     "allServicesBtn": "Show All Services",
     "projectsTitle": "Our Projects",
+    "projectsDescription": "We are proud to present a collection of distinguished projects that reflect our expertise and the quality of our work.",
     "allProjectsBtn": "Show All Projects"
   },
 
