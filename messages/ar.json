@@ -52,6 +52,11 @@
     "stepFiveDescription": "اختبارات واستلامات شاملة والتأكد من مطابقة المواصفات والمعايير"
   },
 
+  "paginationComp": {
+    "next": "التالي",
+    "prev": "السابق"
+  },
+
   "homePage": {
     "servicesTitle": "خدماتنا",
     "servicesDescription": "نفخر بتقديم مجموعة متكاملة من الخدمات الهندسية والاستشارية المتكاملة لتلبية جميع احتياجاتكم.",
@@ -65,5 +70,11 @@
     "title": "خدماتنا",
     "homeLinkText": "الرئيسية",
     "servicesLinkText": "خدماتنا"
+  },
+
+  "projectsPage": {
+    "title": "مشاريعنا",
+    "homeLinkText": "الرئيسية",
+    "servicesLinkText": "مشاريعنا"
   }
 }

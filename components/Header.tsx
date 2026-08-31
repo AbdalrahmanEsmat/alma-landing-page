@@ -5,12 +5,14 @@ import { Link, usePathname } from '@/i18n/navigation';
 import { useState, useRef, useEffect } from 'react';
 import { useLocale, useTranslations } from 'use-intl';
 import Branding from './Branding';
+import { useSearchParams } from 'next/navigation';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const t = useTranslations('Nav');
-  const pathName = usePathname();
+  const searchParams = useSearchParams();
+  const pathName = `${usePathname()}?${searchParams.toString()}`;
   const locale = useLocale();
 
   useEffect(() => {

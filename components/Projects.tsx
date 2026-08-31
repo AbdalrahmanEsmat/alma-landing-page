@@ -1,13 +1,12 @@
-import { getProjects } from '@/utils/data-service';
 import Styles from './Projects.module.css';
 import ProjectCard from './ProjectCard';
+import { Project } from '@/types';
 
 type Props = {
-  numberOfCards?: number;
+  projects: Project[];
 };
 
-export default async function Projects({ numberOfCards }: Props) {
-  const projects = await getProjects(numberOfCards);
+export default async function Projects({ projects }: Props) {
   return (
     <div className={Styles.projectsContainer}>
       {projects.map((project) => (

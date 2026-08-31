@@ -1,16 +1,13 @@
 import { supabase } from './supabase/supabase';
 
-export async function getServices(numberOfServices?: number) {
-  let query = supabase
-    .from('services')
-    .select('id, title_ar, title_en, description_ar, description_en, image_url')
-    .order('id');
-
-  if (numberOfServices !== undefined) {
-    query = query.limit(numberOfServices);
-  }
-
-  const { data, error } = await query;
+export async function getHomePageData(
+  servicesLimit: number,
+  projectsLimit: number,
+) {
+  const { data, error } = await supabase.rpc('get_home_page_data', {
+    services_limit: servicesLimit,
+    projects_limit: projectsLimit,
+  });
 
   if (error) {
     throw new Error(error.message);
@@ -19,8 +16,21 @@ export async function getServices(numberOfServices?: number) {
   return data;
 }
 
-export async function getProjects(numberOfProjects?: number) {
-  let query = supabase
+export async function getServices() {
+  const { data, error } = await supabase
+    .from('services')
+    .select('id, title_ar, title_en, description_ar, description_en, image_url')
+    .order('id');
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data;
+}
+
+export async function getProjects(page: number, perPage: number) {
+  const { data, count, error } = await supabase
     .from('projects')
     .select(
       `
@@ -39,18 +49,17 @@ export async function getProjects(numberOfProjects?: number) {
         is_main
       )
     `,
+      { count: 'exact' },
     )
-    .order('name_ar');
-
-  if (numberOfProjects !== undefined) {
-    query = query.limit(numberOfProjects);
-  }
-
-  const { data, error } = await query;
+    .order('name_ar')
+    .range((page - 1) * perPage, page * perPage - 1);
 
   if (error) {
     throw new Error(error.message);
   }
 
-  return data;
+  return {
+    data,
+    count,
+  };
 }

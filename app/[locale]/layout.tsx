@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import { setRequestLocale } from 'next-intl/server';
 import openGraphImg from '@/assets/images/open-graph-image.png';
 import Footer from '@/components/Footer';
+import { Suspense } from 'react';
 
 type Props = {
   children: React.ReactNode;
@@ -98,7 +99,10 @@ export default async function RootLayout({ children, params }: Props) {
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body>
         <NextIntlClientProvider>
-          <Header />
+          <Suspense fallback={null}>
+            <Header />
+          </Suspense>
+
           {children}
           <Footer locale={locale} />
         </NextIntlClientProvider>

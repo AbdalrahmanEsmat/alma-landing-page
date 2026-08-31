@@ -1,13 +1,12 @@
-import { getServices } from '@/utils/data-service';
+import { Service } from '@/types';
 import ServiceCard from './ServiceCard';
 import Styles from './Services.module.css';
 
 type Props = {
-  numberOfCards?: number;
+  services: Service[];
 };
 
-export default async function Services({ numberOfCards }: Props) {
-  const services = await getServices(numberOfCards);
+export default async function Services({ services }: Props) {
   return (
     <div className={Styles.container}>
       <div className={Styles.servicesContainer}>

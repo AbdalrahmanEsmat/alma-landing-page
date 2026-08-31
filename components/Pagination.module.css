@@ -1,0 +1,19 @@
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-100);
+}
+
+.button {
+  background-color: transparent;
+  border: var(--blue-gray-500) var(--spacing-012) solid;
+  padding: var(--spacing-025) var(--spacing-100);
+  border-radius: var(--radius-8);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.currentPage {
+  font-size: 1.3rem;
+  padding: var(--spacing-025) var(--spacing-100);
+}

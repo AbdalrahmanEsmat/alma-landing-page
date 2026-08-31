@@ -52,6 +52,11 @@
     "stepFiveDescription": "Conducting comprehensive testing and ensuring compliance with specifications and standards"
   },
 
+  "paginationComp": {
+    "next": "next",
+    "prev": "previous"
+  },
+
   "homePage": {
     "servicesTitle": "Our Services",
     "servicesDescription": "We are proud to offer an integrated range of engineering and consulting services to meet all your needs.",
@@ -65,5 +70,11 @@
     "title": "Our Services",
     "homeLinkText": "Home",
     "servicesLinkText": "Services"
+  },
+
+  "projectsPage": {
+    "title": "Projects",
+    "homeLinkText": "Home",
+    "servicesLinkText": "Projects"
   }
 }
