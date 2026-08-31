@@ -29,8 +29,12 @@ export async function getServices() {
   return data;
 }
 
-export async function getProjects(page: number, perPage: number) {
-  const { data, count, error } = await supabase
+export async function getProjects(
+  page: number,
+  perPage: number,
+  category: string,
+) {
+  let query = supabase
     .from('projects')
     .select(
       `
@@ -51,8 +55,15 @@ export async function getProjects(page: number, perPage: number) {
     `,
       { count: 'exact' },
     )
-    .order('name_ar')
-    .range((page - 1) * perPage, page * perPage - 1);
+    .order('name_ar');
+
+  if (category !== 'all') {
+    query = query.ilike('category_en', category);
+  }
+
+  query = query.range((page - 1) * perPage, page * perPage - 1);
+
+  const { data, count, error } = await query;
 
   if (error) {
     throw new Error(error.message);

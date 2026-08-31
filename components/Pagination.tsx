@@ -12,6 +12,7 @@ interface PaginationControlsProps {
   perPage: number;
   totalPage: number;
   pageName: string;
+  otherSearchParams: string;
 }
 
 const PaginationControls: FC<PaginationControlsProps> = ({
@@ -21,12 +22,11 @@ const PaginationControls: FC<PaginationControlsProps> = ({
   perPage,
   totalPage,
   pageName,
+  otherSearchParams,
 }) => {
   const router = useRouter();
   const t = useTranslations('paginationComp');
   const locale = useLocale();
-
-  // function
 
   return (
     <div className={Styles.paginationContainer}>
@@ -35,7 +35,7 @@ const PaginationControls: FC<PaginationControlsProps> = ({
         disabled={!hasPrevPage}
         onClick={() => {
           router.push(
-            `/${locale}/${pageName}?page=${page - 1}&perPage=${perPage}`,
+            `/${locale}/${pageName}?page=${page - 1}&perPage=${perPage}&${otherSearchParams}`,
           );
         }}
       >
@@ -49,7 +49,7 @@ const PaginationControls: FC<PaginationControlsProps> = ({
         disabled={!hasNextPage}
         onClick={() => {
           router.push(
-            `/${locale}/${pageName}?page=${page + 1}&perPage=${perPage}`,
+            `/${locale}/${pageName}?page=${page + 1}&perPage=${perPage}&${otherSearchParams}`,
           );
         }}
       >

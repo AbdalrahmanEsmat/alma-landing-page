@@ -3,6 +3,7 @@ import projectsHerobg from '@/assets/images/projectsHerobg.jpg';
 import Container from '@/components/Container';
 import PageHero from '@/components/PageHero';
 import PaginationControls from '@/components/Pagination';
+import ProjectFiltering from '@/components/projectFiltering';
 import Projects from '@/components/Projects';
 import { getProjects } from '@/utils/data-service';
 import { getTranslations } from 'next-intl/server';
@@ -82,10 +83,11 @@ export async function generateMetadata({ params }: Props) {
 export default async function ProjectsPage({ searchParams }: Props) {
   const t = await getTranslations('projectsPage');
   const queryParams = await searchParams;
+  const category = queryParams?.category || 'all';
   const page = parseInt(queryParams?.page as string) || 1;
   const perPage = parseInt(queryParams?.perPage as string) || 8;
 
-  const { data: projetcs, count } = await getProjects(page, perPage);
+  const { data: projetcs, count } = await getProjects(page, perPage, category);
   const totalPages = Math.ceil((count ?? 0) / perPage);
 
   return (
@@ -96,6 +98,7 @@ export default async function ProjectsPage({ searchParams }: Props) {
         homeLinkText={t('homeLinkText')}
         servicesLinkText={t('servicesLinkText')}
       />
+      <ProjectFiltering category={category} />
       <Container>
         <Projects projects={projetcs} />
       </Container>
@@ -107,6 +110,7 @@ export default async function ProjectsPage({ searchParams }: Props) {
           perPage={perPage}
           totalPage={totalPages}
           pageName="projects"
+          otherSearchParams={`category=${category}`}
         />
       )}
     </main>

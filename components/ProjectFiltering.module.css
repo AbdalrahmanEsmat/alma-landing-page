@@ -1,0 +1,20 @@
+.filtersContainer {
+  display: flex;
+  padding: var(--spacing-500) var(--spacing-500) 0 var(--spacing-500);
+  justify-content: center;
+  gap: var(--spacing-125);
+}
+
+.filter {
+  padding: var(--spacing-050) var(--spacing-125);
+  background-color: transparent;
+  border-radius: var(--radius-8);
+  border: var(--spacing-012) var(--blue-gray-200) solid;
+  cursor: pointer;
+}
+
+.selected {
+  color: #fff;
+  background-color: var(--navy-500);
+  border: transparent;
+}

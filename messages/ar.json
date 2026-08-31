@@ -57,6 +57,16 @@
     "prev": "السابق"
   },
 
+  "projectFilteringComp": {
+    "all": "الكل",
+    "residential": "سكني",
+    "industrial": "صناعي",
+    "commercial": "تجاري",
+    "educational": "تعليمي",
+    "administrative": "إداري",
+    "hotel": "فندقي"
+  },
+
   "homePage": {
     "servicesTitle": "خدماتنا",
     "servicesDescription": "نفخر بتقديم مجموعة متكاملة من الخدمات الهندسية والاستشارية المتكاملة لتلبية جميع احتياجاتكم.",

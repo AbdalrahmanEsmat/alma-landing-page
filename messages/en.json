@@ -57,6 +57,16 @@
     "prev": "previous"
   },
 
+  "projectFilteringComp": {
+    "all": "All",
+    "residential": "Residential",
+    "industrial": "Industrial",
+    "commercial": "Commercial",
+    "educational": "Educational",
+    "administrative": "Administrative",
+    "hotel": "Hotel"
+  },
+
   "homePage": {
     "servicesTitle": "Our Services",
     "servicesDescription": "We are proud to offer an integrated range of engineering and consulting services to meet all your needs.",
