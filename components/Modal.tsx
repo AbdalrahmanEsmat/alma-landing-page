@@ -1,4 +1,7 @@
+'use client';
+
 import { useEffect } from 'react';
+import styles from './Modal.module.css';
 
 type ModalProps = {
   isOpen: boolean;
@@ -32,12 +35,9 @@ export default function Modal({
   if (!isOpen) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/30"
-      onClick={onClose}
-    >
+    <div className={styles.overlay} onClick={onClose}>
       <div
-        className={`rounded-lg bg-white shadow-xl max-h-[80%] overflow-y-auto ${className ?? ''} `}
+        className={`${styles.modal} ${className ?? ''}`}
         onClick={(e) => e.stopPropagation()}
       >
         {children}

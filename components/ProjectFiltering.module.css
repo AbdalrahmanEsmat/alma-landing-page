@@ -3,6 +3,7 @@
   padding: var(--spacing-500) var(--spacing-500) 0 var(--spacing-500);
   justify-content: center;
   gap: var(--spacing-125);
+  flex-wrap: wrap;
 }
 
 .filter {

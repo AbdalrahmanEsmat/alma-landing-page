@@ -79,12 +79,21 @@
   "servicesPage": {
     "title": "Our Services",
     "homeLinkText": "Home",
-    "servicesLinkText": "Services"
+    "servicesText": "Services"
   },
 
   "projectsPage": {
     "title": "Projects",
     "homeLinkText": "Home",
-    "servicesLinkText": "Projects"
+    "projectsText": "Projects"
+  },
+
+  "aboutPage": {
+    "title": "Who we are",
+    "homeLinkText": "Home",
+    "aboutText": "about us",
+    "partOneTitle": "We turn visions into integrated engineering reality",
+    "partOneText": "We are an engineering and architectural consulting office providing integrated engineering solutions. We combine deep expertise with innovation to deliver high-quality projects that meet our clients' aspirations.",
+    "partOneBtn": "Contact Us"
   }
 }

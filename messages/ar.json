@@ -79,12 +79,21 @@
   "servicesPage": {
     "title": "خدماتنا",
     "homeLinkText": "الرئيسية",
-    "servicesLinkText": "خدماتنا"
+    "servicesText": "خدماتنا"
   },
 
   "projectsPage": {
     "title": "مشاريعنا",
     "homeLinkText": "الرئيسية",
-    "servicesLinkText": "مشاريعنا"
+    "projectsText": "مشاريعنا"
+  },
+
+  "aboutPage": {
+    "title": "من نحن",
+    "homeLinkText": "الرئيسية",
+    "aboutText": "من نحن",
+    "partOneTitle": "نحول الرؤى إالى واقع هندسي متكامل",
+    "partOneText": "نحن مكتب استشارات هندسية ومعمارية نقدم حلولاً هندسية متكاملة. نجمع بين الخبرة العميقة والإبتكار لنقدم مشاريع ذات جودة عالية تلبي تطلعات عملائنا.",
+    "partOneBtn": "تواصل معانا"
   }
 }

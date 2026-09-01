@@ -1,5 +1,5 @@
 import openGraphImg from '@/assets/images/open-graph-image.png';
-import projectsHerobg from '@/assets/images/projectsHerobg.jpg';
+import projectsHeroBg from '@/assets/images/projectsHeroBg.jpg';
 import Container from '@/components/Container';
 import PageHero from '@/components/PageHero';
 import PaginationControls from '@/components/Pagination';
@@ -94,9 +94,9 @@ export default async function ProjectsPage({ searchParams }: Props) {
     <main>
       <PageHero
         title={t('title')}
-        backgroundUrl={projectsHerobg.src}
+        backgroundUrl={projectsHeroBg.src}
         homeLinkText={t('homeLinkText')}
-        servicesLinkText={t('servicesLinkText')}
+        pageText={t('projectsText')}
       />
       <ProjectFiltering category={category} />
       <Container>

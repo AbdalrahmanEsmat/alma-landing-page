@@ -5,14 +5,14 @@ type Props = {
   title: string;
   backgroundUrl: string;
   homeLinkText: string;
-  servicesLinkText: string;
+  pageText: string;
 };
 
 export default function PageHero({
   title,
   backgroundUrl,
   homeLinkText,
-  servicesLinkText,
+  pageText,
 }: Props) {
   return (
     <section
@@ -26,7 +26,7 @@ export default function PageHero({
             {homeLinkText}
           </Link>
           <span>/</span>
-          <p className={Styles.link}>{servicesLinkText}</p>
+          <p className={Styles.link}>{pageText}</p>
         </div>
       </div>
     </section>

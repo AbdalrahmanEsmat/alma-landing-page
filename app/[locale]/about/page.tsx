@@ -1,4 +1,12 @@
 import openGraphImg from '@/assets/images/open-graph-image.png';
+import aboutHeroBg from '@/assets/images/aboutHeroBg.jpg';
+import aboutImg1 from '@/assets/images/aboutImg1.jpg';
+import PageHero from '@/components/PageHero';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import Styles from './page.module.css';
+import { Link } from '@/i18n/navigation';
+import Container from '@/components/Container';
+import Image from 'next/image';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -70,10 +78,36 @@ export async function generateMetadata({ params }: Props) {
     },
   };
 }
-export default function AboutPage({ params }: Props) {
+export default async function AboutPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('aboutPage');
   return (
     <main>
-      <h1>this is the about page</h1>
+      <PageHero
+        title={t('title')}
+        homeLinkText={t('homeLinkText')}
+        pageText={t('aboutText')}
+        backgroundUrl={aboutHeroBg.src}
+      />
+      <Container>
+        <div className={Styles.pOne}>
+          <div className={Styles.pOneImgContainer}>
+            <Image
+              src={aboutImg1.src}
+              fill
+              alt="building"
+              className={Styles.pOneImg}
+            />
+          </div>
+          <div className={Styles.pOneInfo}>
+            <h2>{t('title')}</h2>
+            <h3>{t('partOneTitle')}</h3>
+            <p>{t('partOneText')}</p>
+            <Link href="/contact">{t('partOneBtn')}</Link>
+          </div>
+        </div>
+      </Container>
     </main>
   );
 }

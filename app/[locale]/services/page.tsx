@@ -91,9 +91,9 @@ export default async function ServicesPage({ params }: Props) {
     <main>
       <PageHero
         title={t('title')}
-        backgroundUrl={servicesHeroBg.src}
         homeLinkText={t('homeLinkText')}
-        servicesLinkText={t('servicesLinkText')}
+        pageText={t('servicesText')}
+        backgroundUrl={servicesHeroBg.src}
       />
       <Container>
         <Services services={services} />

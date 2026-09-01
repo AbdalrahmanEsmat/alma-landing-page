@@ -2,6 +2,7 @@
   border: var(--spacing-012) var(--blue-gray-200) solid;
   border-radius: var(--radius-8);
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .imgContainer {
@@ -57,4 +58,47 @@
 
 .projectCard:hover {
   transform: scale(1.07);
+}
+
+.modalContainer {
+  width: 75rem;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-600);
+  padding: var(--spacing-200);
+}
+
+.modalMainImgContainer {
+  position: relative;
+  height: 100%;
+  flex: 1;
+}
+
+.modalMainImg {
+  object-fit: cover;
+  border-radius: var(--radius-8);
+}
+
+.images {
+  width: 15%;
+  height: 100%;
+  padding: var(--spacing-150);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-150);
+  border: var(--blue-gray-500) var(--spacing-012) solid;
+  border-radius: var(--radius-8);
+  overflow-y: scroll;
+}
+
+.modalImgContainer {
+  position: relative;
+  width: 100%;
+  height: 7.5em;
+}
+
+.modalImg {
+  object-fit: cover;
+  border-radius: var(--radius-8);
 }
