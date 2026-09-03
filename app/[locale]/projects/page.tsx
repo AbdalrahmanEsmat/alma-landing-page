@@ -1,5 +1,5 @@
 import openGraphImg from '@/assets/images/open-graph-image.png';
-import projectsHeroBg from '@/assets/images/projectsHeroBg.jpg';
+import projectsHeroBg from '@/assets/images/projectsHerobg.jpg';
 import Container from '@/components/Container';
 import PageHero from '@/components/PageHero';
 import PaginationControls from '@/components/Pagination';
