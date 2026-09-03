@@ -121,28 +121,28 @@ export default async function AboutPage({ params }: Props) {
           <div className={Styles.cardsContainer}>
             <div className={Styles.pTwoCard}>
               <div className={Styles.pTwoCardImgContainer}>
-                <Image src={card1Image} alt="commitment" />
+                <Image src={card1Image} alt="commitment" loading="lazy" />
               </div>
               <h3>{t('partTwoCardOneTitle')}</h3>
               <p>{t('partTwoCardOneText')}</p>
             </div>
             <div className={Styles.pTwoCard}>
               <div className={Styles.pTwoCardImgContainer}>
-                <Image src={card2Image} alt="idea" />
+                <Image src={card2Image} alt="idea" loading="lazy" />
               </div>
               <h3>{t('partTwoCardOneTitle')}</h3>
               <p>{t('partTwoCardOneText')}</p>
             </div>
             <div className={Styles.pTwoCard}>
               <div className={Styles.pTwoCardImgContainer}>
-                <Image src={card3Image} alt="quality" />
+                <Image src={card3Image} alt="quality" loading="lazy" />
               </div>
               <h3>{t('partTwoCardOneTitle')}</h3>
               <p>{t('partTwoCardOneText')}</p>
             </div>
             <div className={Styles.pTwoCard}>
               <div className={Styles.pTwoCardImgContainer}>
-                <Image src={card4Image} alt="partner" />
+                <Image src={card4Image} alt="partner" loading="lazy" />
               </div>
               <h3>{t('partTwoCardOneTitle')}</h3>
               <p>{t('partTwoCardOneText')}</p>
@@ -152,7 +152,7 @@ export default async function AboutPage({ params }: Props) {
       </Container>
       <div className={Styles.pThree}>
         <div className={Styles.pThreeImgContainer}>
-          <Image src={p3Img.src} fill alt="building" />
+          <Image src={p3Img.src} fill alt="building" loading="lazy" />
         </div>
         <div className={Styles.pThreeInfo}>
           <MiniTitle>{t('partThreeTitle')}</MiniTitle>
