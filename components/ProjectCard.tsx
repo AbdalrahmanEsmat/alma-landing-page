@@ -82,6 +82,7 @@ export default function ProjectCard({
                   fill
                   alt="project image"
                   className={Styles.modalImg}
+                  loading="lazy"
                 />
               </div>
             ))}

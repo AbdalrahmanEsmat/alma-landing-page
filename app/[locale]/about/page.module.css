@@ -19,7 +19,7 @@
   content: '';
   position: absolute;
   top: 3.5rem;
-  left: -2.5rem;
+  inset-inline-end: -2.5rem;
   width: 6rem;
   height: 6rem;
   background-image: url('../../../assets//images/aboutImg2.png');
@@ -31,7 +31,7 @@
   content: '';
   position: absolute;
   bottom: -1.5rem;
-  left: -1.5rem;
+  inset-inline-end: -1.5rem;
   z-index: -1;
   width: 6rem;
   height: 6rem;
@@ -44,23 +44,6 @@
   flex-direction: column;
   gap: var(--spacing-150);
   justify-content: center;
-}
-
-.pOneInfo > h2 {
-  font-size: 1.1rem;
-  position: relative;
-  padding-inline-start: var(--spacing-300);
-  color: var(--blue-gray-500);
-}
-
-.pOneInfo > h2::before {
-  content: '';
-  position: absolute;
-  width: var(--spacing-250);
-  height: var(--spacing-025);
-  top: 50%;
-  right: -0.3%;
-  background-color: var(--blue-gray-500);
 }
 
 .pOneInfo > h3 {
@@ -83,6 +66,168 @@
   border-radius: var(--radius-8);
 }
 
+.pTwo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-250);
+  padding-top: var(--spacing-400);
+  padding-bottom: var(--spacing-400);
+}
+
+.pTwo > h2 {
+  color: var(--navy-500);
+  font-weight: 800;
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: var(--spacing-100);
+  text-align: center;
+}
+
+.pTwo > h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--spacing-1000); /* 32px */
+  height: var(--spacing-025); /* 1px */
+  background: var(--navy-500);
+}
+
+.pTwo > h2::before {
+  content: '';
+  position: absolute;
+  bottom: calc(var(--spacing-012) * -2);
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--spacing-075);
+  height: var(--spacing-075);
+  border-radius: 50%;
+  background: var(--navy-500);
+  box-shadow: 0 0 0 var(--spacing-050) #fff;
+  z-index: 1;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-200);
+}
+
+.pTwoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-150);
+  width: 18.625rem;
+  padding: var(--spacing-200);
+  border: var(--spacing-012) var(--blue-gray-200) solid;
+  border-radius: var(--radius-12);
+  text-align: center;
+}
+
+.pTwoCardImgContainer {
+  padding: var(--spacing-150);
+  background-color: var(--blue-gray-100);
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pTwoCardImgContainer > img {
+  width: 3rem;
+  height: auto;
+}
+
+.pTwoCard > h3 {
+  color: var(--navy-500);
+}
+
+.pTwoCard > p {
+  color: var(--blue-gray-400);
+  font-weight: 500;
+}
+
+.pThree {
+  display: flex;
+  gap: var(--spacing-400);
+  background-color: var(--blue-gray-100);
+  padding-top: var(--spacing-150);
+  padding-bottom: var(--spacing-150);
+  padding-left: var(--spacing-1800);
+  padding-right: var(--spacing-1800);
+}
+
+.pThreeImgContainer {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+}
+
+.pThreeImgContainer > img {
+  object-fit: cover;
+  border-radius: var(--radius-12);
+}
+
+.pThreeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-150);
+  justify-content: center;
+}
+
+.pThreeInfo p:nth-last-of-type(2) {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--navy-500);
+}
+
+.pThreeInfo p:nth-last-of-type(1) {
+  font-size: 1.1rem;
+  color: var(--navy-500);
+}
+
+.pThreeInfo ul {
+  list-style: none;
+}
+
+.pThreeInfo ul li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-075);
+  font-size: 1rem;
+  color: var(--navy-500);
+}
+
+.pThreeIcons {
+  flex: 0 0 10px;
+}
+
+/* max-width: 500px */
+@media (max-width: 31.25em) {
+  .pThree {
+    padding-left: var(--spacing-400) var(--spacing-400);
+    padding-right: var(--spacing-400) var(--spacing-400);
+  }
+}
+
+/* max-width: 550px */
+@media (max-width: 34.375em) {
+  .pThreeImgContainer {
+    display: none;
+  }
+}
+
+/* max-width: 730px */
+@media (max-width: 45.625em) {
+  .pThree {
+    padding-left: var(--spacing-800);
+    padding-right: var(--spacing-800);
+  }
+}
+
 /* max-width: 1100px */
 @media (max-width: 68.75em) {
   .pOneImgContainer {
@@ -92,7 +237,12 @@
 
 /* max-width: 1000px */
 @media (max-width: 62.5em) {
-  .pOne {
+  .pOne,
+  .pThree {
     flex-wrap: wrap;
+  }
+
+  .pOneImgContainer::before {
+    inset-inline-end: -2rem;
   }
 }

@@ -25,6 +25,7 @@ export default async function ServiceCard({ service }: Props) {
         width={80}
         height={80}
         alt={service.title_ar}
+        loading="lazy"
       />
       <p className={Styles.title}>
         {locale === 'ar' ? service.title_ar : service.title_en}

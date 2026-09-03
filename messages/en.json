@@ -94,6 +94,21 @@
     "aboutText": "about us",
     "partOneTitle": "We turn visions into integrated engineering reality",
     "partOneText": "We are an engineering and architectural consulting office providing integrated engineering solutions. We combine deep expertise with innovation to deliver high-quality projects that meet our clients' aspirations.",
-    "partOneBtn": "Contact Us"
+    "partOneBtn": "Contact Us",
+    "partTwoTitle": "Our Values",
+    "partTwoCardOneTitle": "Commitment",
+    "partTwoCardOneText": "We adhere to the highest standards of quality and professionalism at every stage of the work",
+    "partTwoCardTwoTitle": "Innovation",
+    "partTwoCardTwoText": "We constantly seek innovative solutions that keep pace with development and create added value",
+    "partTwoCardThreeTitle": "Quality",
+    "partTwoCardThreeText": "We ensure quality is maintained in every detail of the work",
+    "partTwoCardFourTitle": "Partnership",
+    "partTwoCardFourText": "We build long-term relationships with our clients based on trust and transparency",
+    "partThreeTitle": "Our Approach",
+    "partThreeIntro": "An integrated approach from concept to operation",
+    "partThreeDescription": "We believe that a project's success begins with a deep understanding of the client's needs and the nature of the site. Through an integrated work methodology, we ensure the delivery of practical, sustainable solutions that achieve goals efficiently and effectively",
+    "partThreePointOne": "Precise study and comprehensive analysis",
+    "partThreePointTwo": "Innovative and sustainable design",
+    "partThreePointThree": "Meticulous supervision and follow-up on implementation"
   }
 }

@@ -1,0 +1,16 @@
+.title {
+  font-size: 1.1rem;
+  position: relative;
+  padding-inline-start: var(--spacing-300);
+  color: var(--blue-gray-500);
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  width: var(--spacing-250);
+  height: var(--spacing-025);
+  top: 50%;
+  inset-inline-start: -0.3%;
+  background-color: var(--blue-gray-500);
+}

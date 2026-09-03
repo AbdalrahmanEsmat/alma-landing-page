@@ -1,12 +1,20 @@
 import openGraphImg from '@/assets/images/open-graph-image.png';
 import aboutHeroBg from '@/assets/images/aboutHeroBg.jpg';
 import aboutImg1 from '@/assets/images/aboutImg1.jpg';
+import card1Image from '@/assets/images/target.png';
+import card2Image from '@/assets/images/lightbulb.png';
+import card3Image from '@/assets/images/high-quality.png';
+import card4Image from '@/assets/images/partner-icon.png';
+import p3Img from '@/assets/images/p3img.jpg';
+import { FaCheck } from 'react-icons/fa';
 import PageHero from '@/components/PageHero';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Styles from './page.module.css';
 import { Link } from '@/i18n/navigation';
 import Container from '@/components/Container';
 import Image from 'next/image';
+import Title from '@/components/Title';
+import MiniTitle from './_components/MiniTitle';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -98,16 +106,74 @@ export default async function AboutPage({ params }: Props) {
               fill
               alt="building"
               className={Styles.pOneImg}
+              priority
             />
           </div>
           <div className={Styles.pOneInfo}>
-            <h2>{t('title')}</h2>
+            <MiniTitle>{t('title')}</MiniTitle>
             <h3>{t('partOneTitle')}</h3>
             <p>{t('partOneText')}</p>
             <Link href="/contact">{t('partOneBtn')}</Link>
           </div>
         </div>
+        <div className={Styles.pTwo}>
+          <Title>{t('partTwoTitle')}</Title>
+          <div className={Styles.cardsContainer}>
+            <div className={Styles.pTwoCard}>
+              <div className={Styles.pTwoCardImgContainer}>
+                <Image src={card1Image} alt="commitment" />
+              </div>
+              <h3>{t('partTwoCardOneTitle')}</h3>
+              <p>{t('partTwoCardOneText')}</p>
+            </div>
+            <div className={Styles.pTwoCard}>
+              <div className={Styles.pTwoCardImgContainer}>
+                <Image src={card2Image} alt="idea" />
+              </div>
+              <h3>{t('partTwoCardOneTitle')}</h3>
+              <p>{t('partTwoCardOneText')}</p>
+            </div>
+            <div className={Styles.pTwoCard}>
+              <div className={Styles.pTwoCardImgContainer}>
+                <Image src={card3Image} alt="quality" />
+              </div>
+              <h3>{t('partTwoCardOneTitle')}</h3>
+              <p>{t('partTwoCardOneText')}</p>
+            </div>
+            <div className={Styles.pTwoCard}>
+              <div className={Styles.pTwoCardImgContainer}>
+                <Image src={card4Image} alt="partner" />
+              </div>
+              <h3>{t('partTwoCardOneTitle')}</h3>
+              <p>{t('partTwoCardOneText')}</p>
+            </div>
+          </div>
+        </div>
       </Container>
+      <div className={Styles.pThree}>
+        <div className={Styles.pThreeImgContainer}>
+          <Image src={p3Img.src} fill alt="building" />
+        </div>
+        <div className={Styles.pThreeInfo}>
+          <MiniTitle>{t('partThreeTitle')}</MiniTitle>
+          <p>{t('partThreeIntro')}</p>
+          <p>{t('partThreeDescription')}</p>
+          <ul>
+            <li>
+              <FaCheck className={Styles.pThreeIcons} />
+              <span>{t('partThreePointOne')}</span>
+            </li>
+            <li>
+              <FaCheck className={Styles.pThreeIcons} />
+              <span>{t('partThreePointTwo')}</span>
+            </li>
+            <li>
+              <FaCheck className={Styles.pThreeIcons} />
+              <span>{t('partThreePointThree')}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
   );
 }
